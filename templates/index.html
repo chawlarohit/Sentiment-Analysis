@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+ {% block body %}
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('{{ url_for('static',filename='img/home.jpg') }}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h3>Movie Reviews</h3>
+            <!--<span class="subheading">A Blog Theme by Start Bootstrap</span>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-preview">
+          <a href="rev.html">
+            <h3 class="post-subtitle">
+              If you like original gut wrenching laughter you will like this movie. If you are young or old then you will love this movie, hell even my mom liked it. Great Camp!!!
+            </h3>
+          </a>
+          <p class="post-meta">Positive</p>
+        </div>
+        <hr>
+        <div class="post-preview">
+          <a href="post.html">
+            <h3 class="post-subtitle">
+              Besides being boring, the scenes were oppressive and dark. The movie tried to portray some kind of moral, but fell flat with its message. What were the redeeming qualities?? On top of that, I don't think it could make librarians look any more unglamorous than it did.
+            </h3>
+          </a>
+          <p class="post-meta">Negative</p>
+        </div>
+        <hr>
+        <div class="post-preview">
+          <a href="post.html">
+            <h3 class="post-subtitle">
+              What an absolutely stunning movie, if you have 2.5 hrs to kill, watch it, you won't regret it, it's too much fun! Rajnikanth carries the movie on his shoulders and although there isn't anything more other than him, I still liked it. The music by A.R.Rehman takes time to grow on you but after you heard it a few times, you really start liking it.
+            </h3>
+          </a>
+          <p class="post-meta">Positive</p>
+        </div>
+        <hr>
+        <div class="post-preview">
+          <a href="post.html">
+            <h3 class="post-subtitle">
+              The plot is about the death of little children. Hopper is the one who has to investigate the killings. During the movie it appears that he has some troubles with his daughter. In the end the serial killer get caught. That's it. But before you find out who dunnit, you have to see some terrible acting by all of the actors. It is unbelievable how bad these actors are, including Hopper. I could go on like this but that to much of a waste of my time. Just don't watch the movie. I've warned you.
+            </h3>
+          </a>
+          <p class="post-meta">Negative</p>
+        </div>
+
+  {% endblock %}

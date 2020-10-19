@@ -1,0 +1,11 @@
+.rev_container {
+	border: 20px solid darkblue;
+	border-radius: 35px;
+    margin-top: 3%;
+}
+
+.rev_header{
+	 margin-top: 6%;
+    color: cornflowerblue;
+    font-style: italic;
+}

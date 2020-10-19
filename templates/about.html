@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block body %}
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('{{ url_for('static',filename='img/Word_Cloud.jpg') }}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h3>About Me</h3>
+            <span class="subheading">This is what we do.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <p>Sentiment analysis text analysis technique that detects polarity (e.g. a positive or negative opinion) within text</p>
+        <p>Here we take the reviews and apply the text mining on them to give feedbak of reviews as (Positive or Negative)! </p>
+        <img src="{{url_for('static', filename='img/sentiment-fig-1-689.jpg')}}", alt="Sentiments" style = "display: block; margin-left: auto; margin-right: auto;">
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

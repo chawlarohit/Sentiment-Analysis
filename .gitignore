@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+movie_reviews.db
+model.pkl
+IMDB Dataset.csv

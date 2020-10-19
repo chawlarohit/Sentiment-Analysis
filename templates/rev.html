@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+{% block body %}
+
+  <!-- Page Header -->
+    <div class ="rev_header">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h3>Man must analyze, and this is analyzing at its greatest</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--   </header> -->
+
+  <!-- Post Content -->
+
+  <!-- Write a review -->
+  <div  >
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto rev_container">
+        <p>Write the review below to find out It's Sentiment!</p>
+        <form name="sentMessage" id="contactForm"  action = "{{ url_for('rev') }}" method = "POST" enctype="multipart/form-data">
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Movie Name</label>
+              <input type="text" class="form-control" placeholder="Movie Name" id="name" name = "name"
+               required data-validation-required-message="Please enter Movie Name." value = '{{name}}'>
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Review</label>
+              <textarea class="form-control"   placeholder="Review" id="review" name = "review" 
+              >{{review}}</textarea>
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>File</label>
+              <input type="file" class="form-control" placeholder="File" id="file" name = "file" 
+              value = '{{filename}}'>
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <br>
+          <div id="success"></div>
+          <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
+        </form>
+          <p>{{message}}</p>
+          <button type="submit" class="btn btn-primary" id="downloadFileButton" style="display:none" 
+          onclick="window.open('/get-file/{{fname}}')">Download!</button>
+          <script>
+            var msg = '{{message}}';
+            if(msg != ''){
+              document.getElementById('downloadFileButton').style.display = "block"
+              $('#contactForm')[0].reset();
+            }
+          </script>
+
+          <hr>
+
+          <img src="{{url_for('static', filename=sentiment)}}", alt="Result" style = "display: block; margin-left: auto; margin-right: auto; " width="275", height="220">
+
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

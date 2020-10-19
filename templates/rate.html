@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block body %}
+
+  <!-- Page Header -->
+    <div class ="rev_header">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h3>Man must analyze, and this is analyzing at its greatest</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--   </header> -->
+
+  <!-- Post Content -->
+
+  <!-- Write a review -->
+  <div  >
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto rev_container">
+        <p>Type the movie name to find out It's Rating!</p>
+        <form name="sentMessage" id="contactForm"  action = "{{ url_for('rating') }}" method = "POST" enctype="multipart/form-data">
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Movie Name</label>
+              <input type="text" class="form-control" placeholder="Movie Name" id="name" name = "name"
+               required data-validation-required-message="Please enter Movie Name." value = '{{name}}'>
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <br>
+          <div id="success"></div>
+          <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
+        </form>
+          <p font-size=15>{{message}}</p>
+
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
