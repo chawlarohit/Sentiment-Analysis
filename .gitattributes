@@ -2,3 +2,4 @@
 *.db filter=lfs diff=lfs merge=lfs -text
 countvect.sav filter=lfs diff=lfs merge=lfs -text
 model.pkl filter=lfs diff=lfs merge=lfs -text
+*.csv filter=lfs diff=lfs merge=lfs -text
